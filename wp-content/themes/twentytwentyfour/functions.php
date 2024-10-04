@@ -204,6 +204,7 @@ if ( ! function_exists( 'twentytwentyfour_pattern_categories' ) ) :
 endif;
 
 add_action( 'init', 'twentytwentyfour_pattern_categories' );
+
 function my_theme_enqueue_styles() {
     wp_enqueue_style('twentytwentyfour-style', get_stylesheet_uri());
     wp_enqueue_style('custom-style', get_template_directory_uri() . '/styles/style.css'); // Đường dẫn tới file style.css
