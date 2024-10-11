@@ -136,15 +136,10 @@
 	<section id="footer">
 		<div class="container">
 				<div class="row text-center text-xs-center text-sm-left text-md-left">
-			<div class="col-4">
-				<?php display_footer_categories(); ?>
-			</div>
-			<div class="col-8">
-				<?php display_footer_recent_posts(); ?>
-			</div>
+	
 			
 		</div>
-							
+		<?php get_template_part( 'patterns/footer-menus-widgets' ); ?>		
 			</div>
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
