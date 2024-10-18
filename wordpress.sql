@@ -103,12 +103,12 @@ CREATE TABLE `wp_footer_links` (
 --
 
 INSERT INTO `wp_footer_links` (`id`, `title`, `url`, `icon_class`) VALUES
-(1, 'Home', 'https://www.fiverr.com/share/qb8D02', 'fa fa-angle-double-right'),
-(2, 'About', 'https://www.fiverr.com/share/qb8D02', 'fa fa-angle-double-right'),
-(3, 'FAQ', 'https://www.fiverr.com/share/qb8D02', 'fa fa-angle-double-right'),
-(4, 'Get Started', 'https://www.fiverr.com/share/qb8D02', 'fa fa-angle-double-right'),
-(5, 'Videos', 'https://www.fiverr.com/share/qb8D02', 'fa fa-angle-double-right'),
-(6, 'Imprint', 'https://www.sunlimetech.com', 'fa fa-angle-double-right');
+(1, 'Home', '#', 'fa fa-angle-double-right'),
+(2, 'About', '#', 'fa fa-angle-double-right'),
+(3, 'FAQ', '#', 'fa fa-angle-double-right'),
+(4, 'Get Started', '#', 'fa fa-angle-double-right'),
+(5, 'Videos', '#', 'fa fa-angle-double-right'),
+(6, 'Imprint', '#', 'fa fa-angle-double-right');
 
 -- --------------------------------------------------------
 
