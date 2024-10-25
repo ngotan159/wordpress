@@ -60,7 +60,7 @@
     margin-left: 13%;
     margin-top: 2%;
     border-right: 1px solid;
-    padding: 50px
+    padding: 45px;
 }
 
 .post-right-column {
@@ -72,6 +72,8 @@
     font-size: 24px;
     font-weight: bold;
     line-height: 1.2;
+    position: relative;
+    transform: translateY(-35px);
 }
 
 .post-date .day {
@@ -99,7 +101,7 @@
 }
 .entry-title {
 	position: relative;
-	top: 15px;
+	top: 8px;
 	text-align: left;
 	font-size: 35px !important;
 	display: flex;
