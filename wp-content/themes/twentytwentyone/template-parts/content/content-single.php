@@ -10,7 +10,6 @@
  */
 
  ?>
-
 <div class="row">
             <div class="col-md-3 bg-corossedbg">
             <h4 class="categories-2">Categories</h4>
@@ -44,9 +43,9 @@
                 
             </div>
         </div>
- <div class="col-md-6">
-	 
- <?php     
+        <div class="col-md-6">
+            
+        <?php     
 $date = get_the_date('d');
 $month = get_the_date('m');
 $year = get_the_date('y');
