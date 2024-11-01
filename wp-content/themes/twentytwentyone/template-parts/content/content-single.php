@@ -10,8 +10,12 @@
  */
 
  ?>
+<<<<<<< HEAD
 
         <div class="row">
+=======
+<div class="row">
+>>>>>>> origin/module9/Categories
             <div class="col-md-3 bg-corossedbg">
             <h4 class="categories-2">Categories</h4>
                 <div class="crossedbg-13">
