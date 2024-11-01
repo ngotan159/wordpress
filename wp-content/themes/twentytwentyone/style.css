@@ -6187,3 +6187,54 @@ footer {
 }
 
 /* End Module 2 */
+/* Module 12 */
+.recents_comments {
+	background: white;
+	height: 200px;
+  }
+
+.recents_comments .commentss{
+	padding-top: 20px;
+	margin-left: 20px;
+}
+  
+  .comment::after {
+	position: relative;
+  }
+  
+  .comment::before {
+	position: absolute;
+	content: "";
+	top: 50px;
+	opacity: 0.1;
+	width: 50px;
+	border-bottom: 2px solid #000;
+  }
+  
+  .comment-content {
+	position: relative;
+	color: #428bca;
+	font-weight: 500;
+	font-size: 90%;
+	left: 15px;
+  }
+  
+  .comment-content::after {
+	position: absolute;
+	content: "";
+	top: 30px;
+	opacity: 0.2;
+	width: 200px;
+	color: #428bca;
+  }
+  .comment-content::before{
+	border-bottom: 1px solid #000;
+	position: absolute;
+	content: "";
+	top: 30px;
+	opacity: 0.2;
+	width: 200px;
+	right: 100%;
+	left: -15px;
+ }
+/* End module 12 */
