@@ -653,3 +653,28 @@ if ( ! function_exists( 'wp_get_list_item_separator' ) ) :
 		return __( ', ', 'twentytwentyone' );
 	}
 endif;
+// Module 8
+function my_custom_comment_ajax() {
+    if (!is_user_logged_in()) {
+        wp_send_json_error(['message' => 'Please log in to comment']);
+    }
+
+    $comment_content = sanitize_text_field($_POST['message']);
+    $post_id = intval($_POST['post_id']);
+
+    $commentdata = [
+        'comment_post_ID' => $post_id,
+        'comment_content' => $comment_content,
+        'user_id' => get_current_user_id(),
+    ];
+
+    $comment_id = wp_insert_comment($commentdata);
+
+    if ($comment_id) {
+        wp_send_json_success(['message' => 'Comment posted successfully!']);
+    } else {
+        wp_send_json_error(['message' => 'Error posting comment']);
+    }
+}
+add_action('wp_ajax_my_custom_comment', 'my_custom_comment_ajax');
+add_action('wp_ajax_nopriv_my_custom_comment', 'my_custom_comment_ajax');
