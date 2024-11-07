@@ -6779,7 +6779,7 @@ ul.timeline.lastpost > li:before {
     position: absolute;
     border-radius: 50%;
     border: 3px solid #22c0e8; /* Blue color for marker border */
-    left: 10px; /* Adjusted to align with line */
+    left: 14px; /* Adjusted to align with line */
     top: 0;
     width: 15px;
     height: 15px;
