@@ -12,59 +12,95 @@ get_header();
 ?>
 <div class="row search-none">
 	<?php
-		get_template_part( 'template-parts/content/content-none' );
+	get_template_part('template-parts/content/content-none');
 	?>
 </div>
 <div class="content-list-post">
-<div class="row">
-<div class="col-md-3">
+	<div class="row">
+		<div class="col-md-3">
 
 
-</div>
-	<div class="col-md-6">
-			
+		</div>
+		<div class="col-md-6">
+			<?php
+			// Start the Loop.
+			while (have_posts()) {
+				the_post();
+
+				/*
+						* Include the Post-Format-specific template for the content.
+						* If you want to override this in a child theme, then include a file
+						* called content-___.php (where ___ is the Post Format name) and that will be used instead.
+						*/
+				echo '<div class="list-view-search">';
+				echo '<div class="row">';
+				echo '<div class="col-md-5">';
+
+				if (is_search()) {
+					echo '<div class="img-detail-search top_news_block_thumb">';
+					twenty_twenty_one_post_thumbnail();
+					echo '</div>';
+				}
+				echo '</div>';
+
+				echo '<div class="col-md-7 top_news_block_desc">';
+				echo '<div class="content-detail-search">';
+				get_template_part('template-parts/content/content-excerpt', get_post_format());
+				echo '</div>';
+				echo '</div>';
+				echo '</div>';
+				echo '</div>';
+
+				// Hiển thị nội dung bài viết với class.
+			} // End the Loop.
+			// Previous/next page navigation.
+			twenty_twenty_one_the_posts_navigation();
+
+			// If no content, include the "No posts found" template.
+			?>
+		</div>
 	</div>
 
-	
-	<div class="col-md-3">
 
-	
-</div>
-</div>
+		<div class="col-md-3">
 
-		<div class="lastpost-list mt-5 mb-5">
-			<div class="br">
-				<div class="col-md-6 offset-md-3">
-					<h4 class="latest-news-title">Latest News</h4>
-						<ul class="timeline lastpost">
-							<?php
-								$args = array(
-								'posts_per_page' => -1,
-								'post_status'    => 'publish',
-								'orderby'        => 'post_date',
-								'order'          => 'DESC',
-								);
-								$latest_posts = get_posts($args);
-								if ($latest_posts) {
-									foreach ($latest_posts as $post) {
-									setup_postdata($post);
-							?>
-								<li class="timeline-item">
+
+		</div>
+	</div>
+
+	<div class="lastpost-list mt-5 mb-5">
+		<div class="br">
+			<div class="col-md-6 offset-md-3">
+				<h4 class="latest-news-title">Latest News</h4>
+				<ul class="timeline lastpost">
+					<?php
+					$args = array(
+						'posts_per_page' => -1,
+						'post_status'    => 'publish',
+						'orderby'        => 'post_date',
+						'order'          => 'DESC',
+					);
+					$latest_posts = get_posts($args);
+					if ($latest_posts) {
+						foreach ($latest_posts as $post) {
+							setup_postdata($post);
+					?>
+							<li class="timeline-item">
 								<a class="post-link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 								<a class="post-date float-right" href="#"><?php echo get_the_date(); ?></a>
 								<p class="post-content"><?php echo wp_trim_words(get_the_content(), 20); ?></p>
-								</li>
-							<?php
-									}
-									wp_reset_postdata();
-								} else {
-								echo '<li class="no-posts">No posts found.</li>';
-								}
-							?>
-						</ul>
-				</div>
+							</li>
+					<?php
+						}
+						wp_reset_postdata();
+					} else {
+						echo '<li class="no-posts">No posts found.</li>';
+					}
+					?>
+				</ul>
 			</div>
 		</div>
+		
 
 </div>
 <?php
