@@ -6681,6 +6681,135 @@ padding-left: 30px;
 	font-size: 15px;
 }
 
+ul.timeline.lastpost {
+    list-style-type: none;
+    position: relative;
+    padding-left: 0;
+}
+
+ul.timeline.lastpost:before {
+    content: ' ';
+    background: #d4d9df;
+    position: absolute;
+    left: 20px; /* Adjusted for alignment with markers */
+    width: 2px;
+    height: 100%;
+    z-index: 1;
+}
+
+ul.timeline.lastpost > li {
+    margin-bottom: 20px;
+    padding-left: 60px; /* Space for marker alignment */
+    position: relative;
+}
+
+ul.timeline.lastpost > li:before {
+    content: '';
+    background: white;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #22c0e8; /* Blue color for marker border */
+    left: 14px; /* Adjusted to align with line */
+    top: 0;
+    width: 15px;
+    height: 15px;
+    z-index: 2;
+}
+
+/* Title and Date Styling */
+ul.timeline.lastpost > li .post-title {
+    font-weight: bold;
+    color: #0073e6; /* Blue color similar to the example */
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+ul.timeline.lastpost > li .post-date {
+    color: #0073e6;
+    font-size: 12px;
+    font-weight: normal;
+    float: right;
+}
+
+/* Content Text Styling */
+ul.timeline.lastpost > li .post-content {
+    color: #333;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Background Styling for .br class */
+.lastpost-list .br {
+    background: white;
+}
 
 /* End Module 10 */
+
+/* Module 15: Timeline List */
+.lastpost-list {
+    max-width: 100%;
+    margin: 0 20px;
+}
+
+ul.timeline.lastpost {
+    list-style-type: none;
+    position: relative;
+    padding-left: 0;
+}
+
+ul.timeline.lastpost:before {
+    content: ' ';
+    background: #d4d9df;
+    position: absolute;
+    left: 20px; /* Adjusted for alignment with markers */
+    width: 2px;
+    height: 100%;
+    z-index: 1;
+}
+
+ul.timeline.lastpost > li {
+    margin-bottom: 20px;
+    padding-left: 60px; /* Space for marker alignment */
+    position: relative;
+}
+
+ul.timeline.lastpost > li:before {
+    content: '';
+    background: white;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #22c0e8; /* Blue color for marker border */
+    left: 10px; /* Adjusted to align with line */
+    top: 0;
+    width: 15px;
+    height: 15px;
+    z-index: 2;
+}
+
+/* Title and Date Styling */
+ul.timeline.lastpost > li .post-title {
+    font-weight: bold;
+    color: #0073e6; /* Blue color similar to the example */
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+ul.timeline.lastpost > li .post-date {
+    color: #0073e6;
+    font-size: 12px;
+    font-weight: normal;
+    float: right;
+}
+
+/* Content Text Styling */
+ul.timeline.lastpost > li .post-content {
+    color: #333;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Background Styling for .br class */
+.lastpost-list .br {
+    background: white;
+}
 
