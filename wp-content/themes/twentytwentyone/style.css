@@ -4035,7 +4035,8 @@ table.wp-calendar-table caption {
 }
 
 .singular .entry-title {
-	font-size: var(--global--font-size-page-title);
+	font-size: 1rem;
+
 }
 
 h1.entry-title {
@@ -6511,3 +6512,104 @@ padding-left: 30px;
 }
  
 /* End Module 9*/
+
+
+/* Moudule 10 */
+.post-content-bg{
+	background: #56bdbf;
+	width: 100%;
+	padding-bottom: 2.5rem;
+}
+.post-color{
+	color: var(--global--color-white);
+}
+.post-content-recent{
+	position: relative;
+	margin-left: 5px;
+}
+.post-content-recent .post-content-date  .entry-header-cus .entry-title-cus{
+	position: absolute;
+    float: left;
+    padding-left: 3.5rem;
+    text-transform: none !important;
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    font-size: var(--global--line-height-page-title);
+    top: 7px;
+}
+.post-content-recent .post-content-date .entry-header-cus{
+	border-bottom: none !important;
+	padding-bottom: 0px !important;
+	margin-bottom: 0px;
+}
+.post-content-recent .post-content-date .entry-header-cus:hover a{
+	color: #fff !important;
+}
+.post-content-recent .post-content-date .entry-header-cus a{
+	font-size: 14px !important;
+    font-weight: 300;
+	text-underline-offset: 0.15em;
+	color: var(--global--color-white);
+	
+}
+
+.post-content-date{
+	position: relative;
+    font-size: 0.8em;
+    width: 15%;
+    min-width: 55px;
+    display: table-cell;
+    vertical-align: middle;
+    top: 1.5rem;
+    left: 10px;
+	padding-bottom: 15px;
+}
+.post-content-recent .post-content-date .post-md{
+	float: left;
+    font-family: 'Prata', serif;
+}
+.post-content-recent .post-content-date .post-day{
+	border-bottom: 1px solid #fff;
+	padding-bottom: 3px;
+}
+.post-content-recent .post-content-date .post-month{
+	line-height: 1.7em;
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+.post-content-recent .post-content-date .post-year{
+	line-height: 3.5em;
+    float: left;
+    margin-left: 3px;
+	margin-top: -5px;
+}
+.views-all-news .all-news{
+	display: block;
+    padding: 10px;
+    text-align: center;
+    background: #62c6c8;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.views-all-news .all-news .all-news-title{
+	color: #ffff !important;
+}
+ .views-all-news .all-news:hover a{
+	color: #ffff !important;
+}
+.entry-header{
+	display: contents;
+}
+.entry-title a{
+	color: #fff;
+	margin-left: 50px;
+	position: absolute;
+    top: -5px;
+}
+.post-content-date{
+	
+} 
+
+/* End Module 10 */

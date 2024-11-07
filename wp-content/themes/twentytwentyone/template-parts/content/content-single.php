@@ -81,5 +81,42 @@ $year = get_the_date('y');
  </div>
 
  </div>
- 
+ <div class="col-md-3">
+            <div class="recent-posts-container post-content-bg">
+                <?php
+                $recent_posts = get_posts(array(
+                    'post_type' => 'post',
+                    'posts_per_page' => 3,
+                ));
+
+                foreach ($recent_posts as $post) :
+                    setup_postdata($post);
+                    $day = get_the_date('d');
+                    $month = get_the_date('m');
+                    $year = substr(get_the_date('Y'), -2, 2);
+                    ?>
+                    <article id="post-<?php the_ID(); ?>" <?php post_class('post-content-recent'); ?>>
+                           <div class="post-content-date">
+                            <div>
+                            <div class="post-md">
+                                <span class="post-day post-color"><?php echo $day; ?></span>
+                                <span class="post-month post-color"><?php echo $month; ?></span>
+                            </div>
+                            <span class="post-year post-color"><?php echo $year; ?></span>
+                </div>
+                            <?php get_template_part('template-parts/header/excerpt-header', get_post_format()); ?>
+                        </div>
+
+                    </article><!-- #post-${ID} -->
+                <?php
+                endforeach;
+                wp_reset_postdata();
+                ?>
+            </div>
+            <div class="views-all-news">
+                <div class="all-news">
+                    <a class="all-news-title" href="<?php echo home_url(); ?>">Xem tất cả tin tức</a>
+                </div>
+            </div>
+        </div>
 </div>
