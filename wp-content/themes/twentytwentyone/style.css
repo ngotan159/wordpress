@@ -6585,7 +6585,167 @@ padding-left: 30px;
 	top: 4px !important;
 }
 /* End module 8*/
-/* Module 15: */
+/* Moudule 10 */
+.post-content-bg{
+	background: #56bdbf;
+	width: 100%;
+	padding-bottom: 2.5rem;
+}
+.post-color{
+	color: var(--global--color-white);
+}
+.post-content-recent{
+	position: relative;
+	margin-left: 5px;
+}
+.post-content-recent .post-content-date  .entry-header-cus .entry-title-cus{
+	position: absolute;
+    float: left;
+    padding-left: 3.5rem;
+    text-transform: none !important;
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    font-size: var(--global--line-height-page-title);
+    top: 7px;
+}
+.post-content-recent .post-content-date .entry-header-cus{
+	border-bottom: none !important;
+	padding-bottom: 0px !important;
+	margin-bottom: 0px;
+}
+.post-content-recent .post-content-date .entry-header-cus:hover a{
+	color: #fff !important;
+}
+.post-content-recent .post-content-date .entry-header-cus a{
+	font-size: 14px !important;
+    font-weight: 300;
+	text-underline-offset: 0.15em;
+	color: var(--global--color-white);
+	
+}
+
+.post-content-date{
+	position: relative;
+    font-size: 0.8em;
+    width: 15%;
+    min-width: 55px;
+    display: table-cell;
+    vertical-align: middle;
+    top: 1.5rem;
+    left: 10px;
+	padding-bottom: 15px;
+}
+.post-content-recent .post-content-date .post-md{
+	float: left;
+    font-family: 'Prata', serif;
+}
+.post-content-recent .post-content-date .post-day{
+	border-bottom: 1px solid #fff;
+	padding-bottom: 3px;
+}
+.post-content-recent .post-content-date .post-month{
+	line-height: 1.7em;
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+.post-content-recent .post-content-date .post-year{
+	line-height: 3.5em;
+    float: left;
+    margin-left: 3px;
+	margin-top: -5px;
+}
+.views-all-news .all-news{
+	display: block;
+    padding: 10px;
+    text-align: center;
+    background: #62c6c8;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.views-all-news .all-news .all-news-title{
+	color: #ffff !important;
+}
+ .views-all-news .all-news:hover a{
+	color: #ffff !important;
+}
+.post-content-recent .entry-header{
+	display: contents;
+}
+.post-content-recent .entry-title a{
+	color: #fff;
+	margin-left: 50px;
+	position: absolute;
+    top: -4px;
+	font-size: 15px;
+}
+
+ul.timeline.lastpost {
+    list-style-type: none;
+    position: relative;
+    padding-left: 0;
+}
+
+ul.timeline.lastpost:before {
+    content: ' ';
+    background: #d4d9df;
+    position: absolute;
+    left: 20px; /* Adjusted for alignment with markers */
+    width: 2px;
+    height: 100%;
+    z-index: 1;
+}
+
+ul.timeline.lastpost > li {
+    margin-bottom: 20px;
+    padding-left: 60px; /* Space for marker alignment */
+    position: relative;
+}
+
+ul.timeline.lastpost > li:before {
+    content: '';
+    background: white;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #22c0e8; /* Blue color for marker border */
+    left: 14px; /* Adjusted to align with line */
+    top: 0;
+    width: 15px;
+    height: 15px;
+    z-index: 2;
+}
+
+/* Title and Date Styling */
+ul.timeline.lastpost > li .post-title {
+    font-weight: bold;
+    color: #0073e6; /* Blue color similar to the example */
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+ul.timeline.lastpost > li .post-date {
+    color: #0073e6;
+    font-size: 12px;
+    font-weight: normal;
+    float: right;
+}
+
+/* Content Text Styling */
+ul.timeline.lastpost > li .post-content {
+    color: #333;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Background Styling for .br class */
+.lastpost-list .br {
+    background: white;
+}
+
+/* End Module 10 */
+
+/* Module 15: Timeline List */
 .lastpost-list {
     max-width: 100%;
     margin: 0 20px;
@@ -6619,7 +6779,7 @@ ul.timeline.lastpost > li:before {
     position: absolute;
     border-radius: 50%;
     border: 3px solid #22c0e8; /* Blue color for marker border */
-    left: 14px; /* Adjusted to align with line */
+    left: 10px; /* Adjusted to align with line */
     top: 0;
     width: 15px;
     height: 15px;
