@@ -6585,5 +6585,104 @@ padding-left: 30px;
 	top: 4px !important;
 }
 /* End module 8*/
+/* Phần 14-Comments */
+/* Bố cục Flex cho toàn bộ container */
+.search-page-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
 
+/* Cột bên trái (Pages) */
+.sidebar-left {
+    flex: 1;
+    max-width: 20%; /* Điều chỉnh tỉ lệ chiều rộng theo ý muốn */
+}
+
+/* Cột giữa (Search Result) */
+.main-content {
+    flex: 2;
+    max-width: 60%; /* Điều chỉnh tỉ lệ chiều rộng theo ý muốn */
+}
+
+/* Cột bên phải (Comments) */
+.sidebar-right {
+    flex: 1;
+    max-width: 20%; /* Điều chỉnh tỉ lệ chiều rộng theo ý muốn */
+}
+
+/* CSS cho hộp bình luận */
+.comment-box {
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background-color: #ffffff; /* Nền trắng cho toàn bộ khung bình luận */
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Tạo bóng nhẹ */
+}
+
+/* Định dạng cho avatar */
+.comment-box img {
+    width: 50px;
+    height: 50px;
+    border-radius: 0; /* Avatar hình vuông */
+    margin-right: 10px;
+}
+
+/* Định dạng cho phần bên trái avatar */
+.comment-box .media-left {
+    width: 60px;
+}
+
+/* Phần chứa nội dung bình luận */
+.comment-box .media-body {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Tiêu đề bình luận (tên người dùng) */
+.comment-box .media-heading {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    position: relative;
+    border-radius: 3px;
+}
+
+/* Tạo hình tam giác cho phần tiêu đề */
+.comment-box .media-heading:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    position: absolute;
+    top: 12px;
+    left: -6px;
+    transform: rotate(45deg);
+}
+
+/* Nội dung bình luận */
+.comment-box .media-body p {
+    margin: 0;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Bình luận trả lời (lùi vào) */
+.children .comment-box, .comment-reply .comment-box {
+    margin-left: 40px; /* Khoảng cách lùi vào cho bình luận trả lời */
+    border-left: 2px solid #ddd; /* Đường viền dọc ở bên trái */
+    padding-left: 15px;
+}
 

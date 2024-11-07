@@ -2628,7 +2628,7 @@ function comment_form( $args = array(), $post = null ) {
 			)
 		),
 		'logged_in_as'         => sprintf(
-			'<p class="logged-in-as"></p>',
+			'<p class="logged-in-as">%s%s</p>',
 			sprintf(
 				/* translators: 1: User name, 2: Edit user link, 3: Logout URL. */
 				__( 'Logged in as %1$s. <a href="%2$s">Edit your profile</a>. <a href="%3$s">Log out?</a>' ),
@@ -2664,7 +2664,7 @@ function comment_form( $args = array(), $post = null ) {
 		'cancel_reply_after'   => '</small>',
 		'cancel_reply_link'    => __( 'Cancel reply' ),
 		'label_submit'         => __( 'Post Comment' ),
-		'submit_button'        => '',
+		'submit_button'        => '<input name="%1$s" type="submit" id="%2$s" class="%3$s" value="%4$s" />',
 		'submit_field'         => '<p class="form-submit">%1$s %2$s</p>',
 		'format'               => 'xhtml',
 	);
