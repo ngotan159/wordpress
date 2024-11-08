@@ -62,7 +62,8 @@ $twentytwentyone_aria_label = 'aria-label="Search form"';
             <form role="search" <?php echo $twentytwentyone_aria_label; ?> method="get" class="search-form card card-sm" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                 <div class="card-body row no-gutters align-items-center">
                     <div class="col-auto">
-                        <i class="fas fa-search h4 text-body"></i>
+                    <i class="fa fa-search" aria-hidden="true"></i>
+
                     </div>
                     <!--end of col-->
                     <div class="col">
